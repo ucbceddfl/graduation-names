@@ -1,3 +1,4 @@
+outlets = 2;
 var delim = ",";
 
 function tab(){
@@ -20,6 +21,7 @@ function read(filepath) {
     lines.push(file.readline(9999));
   }
   var cells = [];
+  outlet(1, lines.length);
   for(i = 0; i < lines.length; i++){
     cells[i] = lines[i].split(delim);
   }
